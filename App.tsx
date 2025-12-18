@@ -7,9 +7,10 @@ import { Soma } from '@/screens/soma';
 import { ListaScreen } from '@/screens/listas';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { RootStackParamList } from '@/interface/rootPages';
 
 export default function App() {
-  const Stack = createNativeStackNavigator();
+  const Stack = createNativeStackNavigator<RootStackParamList>();
   return (
     <>
       <SafeAreaView className="flex-1">
