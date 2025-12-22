@@ -8,6 +8,7 @@ import { ListaScreen } from '@/screens/listas';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { RootStackParamList } from '@/interface/rootPages';
+import { ListaNumeroScreen } from '@/screens/listaNumero';
 
 export default function App() {
   const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -16,15 +17,16 @@ export default function App() {
       <SafeAreaView className="flex-1">
         <NavigationContainer>
           <Stack.Navigator 
-            initialRouteName="login" 
+            initialRouteName="listaNumero" 
             screenOptions={{ headerShown: false }}
           >
             <Stack.Screen name="login" component={LoginScreen} />
             <Stack.Screen name="soma" component={Soma} />
             <Stack.Screen name="listas" component={ListaScreen} />
+            <Stack.Screen name="listaNumero" component={ListaNumeroScreen} />
           </Stack.Navigator>
         </NavigationContainer>
-      </SafeAreaView>documentTitle={{ enabled: false }}
+      </SafeAreaView>
 
       <StatusBar style="auto" />
     </>
